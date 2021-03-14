@@ -1,0 +1,275 @@
+$mydisplay:block;
+$mycolor:white;
+
+* {
+    box-sizing: border-box;
+    
+  }
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  [class*="col-"] {
+    float: left;
+    padding: 15px;
+
+  }
+
+  /* For mobile phones: */
+ 
+[class*="col-"] {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
+%sharedFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+   @extend %sharedFlex;
+    align-content: space-between;
+    flex-wrap: wrap;
+    
+    
+    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+  }
+  
+  li {
+    float: left;
+  }
+  
+  li a, .dropbtn {
+    display:$mydisplay;
+    color: rgb(28, 30, 37);
+    text-align: center;
+    padding: 3px 15px;
+    text-decoration: none;
+  
+  
+  &:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(247, 193, 46);
+    border-radius: 5%;
+  }}
+  
+  li.dropdown {
+    display: $mydisplay;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 7px 8px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  &:hover {background-color: rgb(231, 212, 41);}}
+  
+  .dropdown:hover .dropdown-content {
+    display: $mydisplay;
+  }
+  
+  .banner{
+    background: url("banner.jpg") no-repeat ;
+    background-size: cover;
+   
+ background-attachment: fixed;
+ background-position: center center;
+  padding:8%;
+  
+  
+
+}
+
+.banner-content{
+   display: flex;
+   justify-content: flex-start;
+   align-items: flex-start;
+   flex-direction: column;
+  
+   overflow: hidden;
+}
+.banner-content h1{
+    font-family: 'Lobster', cursive;
+font-size:75px;
+color:rgb(247, 193, 46);
+}
+.banner-content p{
+    font-family: 'Lobster', cursive;
+font-family: 'Sniglet', cursive;
+}
+
+
+%sharedclass1{
+    text-decoration: none;
+    color: rgb(247, 193, 46);
+    border: 1px solid rgb(247, 193, 46);
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size:18px;
+    font-family: 'Sniglet', cursive;
+    transition: 0.6s ease;
+}
+%sharedclass2{
+
+    background: rgb(247, 193, 46);
+    color: white;
+}
+
+.btnone{
+   
+  @extend %sharedclass1;
+
+&:hover{
+    @extend %sharedclass2;
+}}
+.btntwo{
+    @extend %sharedclass1;
+    margin-left: 10px;
+
+&:hover{
+ @extend %sharedclass2;
+}}
+.btnthree{
+   
+    @extend %sharedclass1;
+  
+  &:hover{
+      @extend %sharedclass2;
+  }}
+  .content{
+      display: flex;
+      justify-content:flex-start;
+      flex-direction: column;
+      align-items: flex-start;
+  }
+  %sharedclassH2{
+    font-family: 'Lobster', cursive;
+    color:rgb(247, 193, 46);
+  }
+.content h2{
+   @extend %sharedclassH2;
+   
+}
+
+.content h1{
+    font-family: 'Sniglet', cursive;
+    color: rgb(23, 23, 41);
+}
+%sharedclasstext{
+    color: rgb(136, 132, 132);
+    font-family: 'Montserrat', sans-serif;  
+}
+.content p{
+  @extend %sharedclasstext;
+}
+%sharedclass3{
+    border-radius: 7px;
+    max-width: 100%;
+    height: auto;  
+}
+.right img{
+   @extend %sharedclass3;
+}
+.right2 img{
+    @extend %sharedclass3;
+}
+.cardd h2{
+@extend %sharedclassH2;
+}
+.cardd{
+    @extend %sharedFlex;
+    flex-direction: column;
+    
+}
+.cardd h1{
+    font-family: 'Anton', sans-serif;
+    color: rgb(23, 23, 41);
+}
+.texth5{
+    color: rgb(23, 23, 41);
+    font-weight: bold;
+}
+.text{
+    @extend %sharedclasstext;
+}
+.card2{
+    padding-bottom: 6%;
+}
+.lastBlog{
+    padding-left: 5%;
+}
+.moreBlog{
+    @extend %sharedFlex;
+}
+.vote1{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+
+}
+.footer{
+  background-color:rgb(23, 23, 41) ;
+}
+.footer h2{
+  color:$mycolor;
+  font-weight: bold;
+}
+.footer hr{
+  width:100%;
+  color:lightslategray;
+  
+}
+.footer p {
+  color: $mycolor;
+}
+.icon{
+  color:$mycolor;
+}

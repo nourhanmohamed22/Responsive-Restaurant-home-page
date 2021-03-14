@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box; }
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table; }
+
+[class*="col-"] {
+  float: left;
+  padding: 15px; }
+
+/* For mobile phones: */
+[class*="col-"] {
+  width: 100%; }
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  .col-s-1 {
+    width: 8.33%; }
+
+  .col-s-2 {
+    width: 16.66%; }
+
+  .col-s-3 {
+    width: 25%; }
+
+  .col-s-4 {
+    width: 33.33%; }
+
+  .col-s-5 {
+    width: 41.66%; }
+
+  .col-s-6 {
+    width: 50%; }
+
+  .col-s-7 {
+    width: 58.33%; }
+
+  .col-s-8 {
+    width: 66.66%; }
+
+  .col-s-9 {
+    width: 75%; }
+
+  .col-s-10 {
+    width: 83.33%; }
+
+  .col-s-11 {
+    width: 91.66%; }
+
+  .col-s-12 {
+    width: 100%; } }
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {
+    width: 8.33%; }
+
+  .col-2 {
+    width: 16.66%; }
+
+  .col-3 {
+    width: 25%; }
+
+  .col-4 {
+    width: 33.33%; }
+
+  .col-5 {
+    width: 41.66%; }
+
+  .col-6 {
+    width: 50%; }
+
+  .col-7 {
+    width: 58.33%; }
+
+  .col-8 {
+    width: 66.66%; }
+
+  .col-9 {
+    width: 75%; }
+
+  .col-10 {
+    width: 83.33%; }
+
+  .col-11 {
+    width: 91.66%; }
+
+  .col-12 {
+    width: 100%; } }
+ul, .cardd, .moreBlog {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: white;
+  align-content: space-between;
+  flex-wrap: wrap;
+  font-family: 'Josefin Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px; }
+
+li {
+  float: left; }
+
+li a, .dropbtn {
+  display: block;
+  color: #1c1e25;
+  text-align: center;
+  padding: 3px 15px;
+  text-decoration: none; }
+  li a:hover, li a .dropdown:hover .dropbtn, .dropbtn:hover, .dropbtn .dropdown:hover .dropbtn {
+    background-color: #f7c12e;
+    border-radius: 5%; }
+
+li.dropdown {
+  display: block; }
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2); }
+
+.dropdown-content a {
+  color: black;
+  padding: 7px 8px;
+  text-decoration: none;
+  display: block;
+  text-align: left; }
+  .dropdown-content a:hover {
+    background-color: #e7d429; }
+
+.dropdown:hover .dropdown-content {
+  display: block; }
+
+.banner {
+  background: url("banner.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center center;
+  padding: 8%; }
+
+.banner-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  overflow: hidden; }
+
+.banner-content h1 {
+  font-family: 'Lobster', cursive;
+  font-size: 75px;
+  color: #f7c12e; }
+
+.banner-content p {
+  font-family: 'Lobster', cursive;
+  font-family: 'Sniglet', cursive; }
+
+.btnone, .btntwo, .btnthree {
+  text-decoration: none;
+  color: #f7c12e;
+  border: 1px solid #f7c12e;
+  padding: 10px 10px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: 'Sniglet', cursive;
+  transition: 0.6s ease; }
+
+.btnone:hover, .btntwo:hover, .btnthree:hover {
+  background: #f7c12e;
+  color: white; }
+
+.btntwo {
+  margin-left: 10px; }
+
+.content {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: flex-start; }
+
+.content h2, .cardd h2 {
+  font-family: 'Lobster', cursive;
+  color: #f7c12e; }
+
+.content h1 {
+  font-family: 'Sniglet', cursive;
+  color: #171729; }
+
+.content p, .text {
+  color: #888484;
+  font-family: 'Montserrat', sans-serif; }
+
+.right img, .right2 img {
+  border-radius: 7px;
+  max-width: 100%;
+  height: auto; }
+
+.cardd {
+  flex-direction: column; }
+
+.cardd h1 {
+  font-family: 'Anton', sans-serif;
+  color: #171729; }
+
+.texth5 {
+  color: #171729;
+  font-weight: bold; }
+
+.card2 {
+  padding-bottom: 6%; }
+
+.lastBlog {
+  padding-left: 5%; }
+
+.vote1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+
+.footer {
+  background-color: #171729; }
+
+.footer h2 {
+  color: white;
+  font-weight: bold; }
+
+.footer hr {
+  width: 100%;
+  color: lightslategray; }
+
+.footer p {
+  color: white; }
+
+.icon {
+  color: white; }
+
+/*# sourceMappingURL=styless.css.map */
